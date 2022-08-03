@@ -92,7 +92,7 @@
 >   
 >   * pod和service之间
 >     
->     * 转发到ovs br0的tun0接口，先进行iptables的NAT过程【**参考kube-proxy**】，然后回到br0的vxlan0，然后转发到宿主机的网卡
+>     * 转发到ovs br0的tun0接口，先在iptables匹配service目的pod ip【**参考kube-proxy**】，然后回到br0的vxlan0，然后转发到宿主机的网卡
 >       
 >       <img src="./pod-service.png" title="" alt="" data-align="center">
 > 
